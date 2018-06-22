@@ -1,8 +1,7 @@
-
 var header = document.querySelector('header');
 var section = document.querySelector('section');
 
-var requestURL = "https://github.com/MaksOnashko/Incode/blob/master/clients.json";
+var requestURL = "https://github.com/MaksOnashko/Incode/blob/master/index/clients.json";
 var request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'json';
@@ -22,7 +21,7 @@ request.onload = function() {
 //  var myPara = document.createElement('p');
 //  myPara.textContent = 'General: ' + jsonObj['general'] + ' // Job: ' + jsonObj['job'] + ' // Contact: ' + jsonObj['contact'] + ' // Address: ' + jsonObj['address'];
 //  header.appendChild(myPara);
-}
+//}
 
 function showEmployee(jsonObj) {
   var Employee = jsonObj['general'];
@@ -77,7 +76,7 @@ for (var i = 0; i < Employee.length; i++) {
     var myPara2 = document.createElement('p');
     
 
-    myPara1.textContent = 'email' Employee[i].email;
+    myPara1.textContent = 'email: ' + Employee[i].email;
     myPara2.textContent = 'phone: ' + Employee[i].phone;
         
 };
