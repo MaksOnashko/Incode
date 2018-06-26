@@ -1,8 +1,9 @@
 var header = document.querySelector('header');
 var section = document.querySelector('section');
 
-var requestURL = "https://github.com/MaksOnashko/Incode/blob/master/index/clients.json";
-var request = new XMLHttpRequest();
+//var requestURL = "D:\projects\In_code\Incode\index\clients.json";
+//var request = new XMLHttpRequest();
+var clients = JSON.parse(fs.readFileSync("D:\projects\In_code\Incode\index\clients.json"));
 request.open('GET', requestURL);
 request.responseType = 'json';
 request.send();
